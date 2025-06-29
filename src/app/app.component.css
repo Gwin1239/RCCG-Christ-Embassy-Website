@@ -1,0 +1,126 @@
+
+.social-icons a {
+  margin-right: 15px;
+  color: white;
+  font-size: 1.25rem;
+}
+.social-icons a:last-child {
+  margin-right: 0;
+}
+
+
+/* Make each slide fill the viewport */
+.carousel,
+.carousel-inner,
+.carousel-item {
+  height: 100vh;
+}
+
+/* Ensure images cover the entire area without distortion */
+.carousel-img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+}
+
+
+/* reset any default page margins */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* flex‐container spans full width, no gap*/
+.slide-box-row {
+  display: flex;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+/* each box takes equal share, stays square */
+.slide-box {
+  flex: 1;                  /* 5 boxes → each 20% of row */
+  aspect-ratio: 1 / 1;      /* keep perfect square */
+  overflow: hidden;
+  position: relative;
+}
+
+/* same slide-up inner logic as before */
+.slide-box-inner {
+  position: relative;
+  width: 100%;
+  height: 200%;
+  transition: transform 0.6s ease;
+}
+.slide-box:hover .slide-box-inner {
+  transform: translateY(-50%);
+}
+
+/* faces */
+.slide-box-front,
+.slide-box-back {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* squared corners by default since no border-radius */
+}
+.slide-box-front {
+  top: 0;
+  background: #f0f0f0;
+  color: #333;
+}
+.slide-box-back {
+  top: 50%;
+  background: #007bff;
+  color: white;
+}
+
+.slide-box-front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;              /* space between icon and text */
+}
+
+/* 4) Your live-stream override — must come *after* the base rules! */
+.live-stream .slide-box-front {
+  background: teal;    /* or use #008080 for consistency */
+  color: white;
+}
+
+/* 5) Events override – a bit lighter than teal */
+.event-box .slide-box-front {
+  background: #20b2aa; /* LightSeaGreen */
+  color: white;
+}
+
+
+/* 3) Bible Study */
+.bible-study .slide-box-front {
+  background: #48C9BF;  /* slightly lighter */
+  color: white;
+}
+
+/* 4) Prayer Request */
+.prayer-request .slide-box-front {
+  background: #70DCCA;  /* a bit lighter still */
+  color: white;
+}
+
+/* 5) Previous Services */
+.previous-services .slide-box-front {
+  background: #98EFD4;  /* lightest shade */
+  color: white;
+}
