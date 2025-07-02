@@ -1,0 +1,52 @@
+<main class="contact-page container py-5">
+  <h1 class="text-center mb-3">We'd Love To Hear From You!</h1>
+  <p class="text-center text-muted mb-5">
+    Feel free to send us any questions you may have. We are happy to answer them.
+  </p>
+  <div class="row">
+    <!-- Form Column -->
+    <div class="col-lg-7 mb-4">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name *</label>
+          <input id="name" class="form-control" formControlName="name" />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email *</label>
+          <input id="email" type="email" class="form-control" formControlName="email" />
+        </div>
+        <div class="mb-3">
+          <label for="subject" class="form-label">Subject *</label>
+          <input id="subject" class="form-control" formControlName="subject" />
+        </div>
+        <div class="mb-4">
+          <label for="message" class="form-label">Message *</label>
+          <textarea id="message" rows="6" class="form-control" formControlName="message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Send</button>
+      </form>
+    </div>
+
+    <!-- Info Column -->
+    <div class="col-lg-5">
+      <button class="btn btn-outline-success w-100 mb-4">
+        <i class="fa-solid fa-hands-praying me-2"></i>
+        Prayer Request
+      </button>
+      <ul class="list-unstyled mb-0 contact-info">
+        <li>
+          <i class="fa-solid fa-location-dot me-2"></i>
+          618 2nd Avenue NE, Calgary, Alberta, T2E 0E8, Canada
+        </li>
+        <li class="mt-3">
+          <i class="fa-solid fa-phone me-2"></i>
+          +1 (587) 579 0454
+        </li>
+        <li class="mt-3">
+          <i class="fa-solid fa-envelope me-2"></i>
+          rccgchristembassy.org
+        </li>
+      </ul>
+    </div>
+  </div>
+</main>
