@@ -1,0 +1,108 @@
+/* Import a fancy font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+/* Animated Banner Styles */
+.giving-banner {
+  background-color: #F1FBFA;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.giving-banner h1 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  color: #00c08b;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+.giving-banner .line1,
+.giving-banner .line2 {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+.giving-banner .line1 {
+  animation-delay: 0.5s;
+}
+.giving-banner .line2 {
+  animation-delay: 2s;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+
+
+
+.giving-page {
+  background-color: #00c08b; /* teal background */
+  color: #fff;
+  padding: 4rem 1rem;
+}
+.giving-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+
+  .giving-image,
+  .giving-content {
+    flex: 1 1 400px;
+    max-width: 400px;
+  }
+}
+.giving-image {
+  flex: 1 1 400px;
+  text-align: center;
+  img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    border-radius: 1rem;
+    object-fit: cover;
+  }
+}
+.giving-content {
+  flex: 1 1 400px;
+  padding: 2rem;
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+}
+.giving-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.btn-light {
+  background-color: #fff;
+  color: #00c08b;
+  border: none;
+}
+.btn-outline-light {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+
+
+/* Styles for Other Ways to Give section */
+.non-cash-giving {
+  background-color: #f8f9fa;
+  h2 {
+    color: #212529;
+  }
+  .card-body i {
+    font-size: 2rem;
+  }
+  .card {
+    border-radius: 0.5rem;
+  }
+}

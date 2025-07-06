@@ -1,0 +1,68 @@
+
+/* Mission Section Styles */
+.mission-section {
+  background-color: #fff;
+  color: #333;
+  padding: 4rem 1rem;
+}
+.mission-section h2 {
+  font-size: 2.5rem;
+  color: #000;
+  margin-bottom: 1.5rem;
+}
+.mission-section p,
+.mission-section ul,
+.mission-section li {
+  max-width: 800px;
+  margin: 0.5rem auto;
+  line-height: 1.6;
+}
+
+
+.about-us {
+  .accordion-item {
+    border: 1px solid #e1e1e1;
+    border-radius: 0.25rem;
+    overflow: hidden;
+
+    .accordion-header {
+      background-color: #F1FBFA;
+      cursor: pointer;
+      h5 {
+        color: #28a745;
+      }
+      .toggle-icon {
+        font-size: 1.5rem;
+        line-height: 1;
+        color: #28a745;
+      }
+      &.open {
+        background-color: #e0f7f5;
+      }
+    }
+
+    .accordion-body {
+      background-color: #fff;
+      color: #333;
+    }
+  }
+}
+
+
+/* History Section Styles */
+.history-section {
+ /* background: url('assets/images/img1.jpeg') no-repeat center; */
+  background-size: cover;
+  color: #333;
+  padding: 4rem 1rem;
+}
+.history-section h2 {
+  font-size: 2.5rem;
+  color: #000;
+  margin-bottom: 1.5rem;
+}
+.history-section p {
+  max-width: 800px;
+  margin: 1rem auto;
+  line-height: 1.6;
+}
